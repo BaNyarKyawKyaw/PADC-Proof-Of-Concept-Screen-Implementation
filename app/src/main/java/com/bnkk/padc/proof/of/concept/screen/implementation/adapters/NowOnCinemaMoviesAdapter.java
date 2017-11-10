@@ -7,28 +7,28 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bnkk.padc.proof.of.concept.screen.implementation.R;
-import com.bnkk.padc.proof.of.concept.screen.implementation.viewholders.MoviesViewHolder;
+import com.bnkk.padc.proof.of.concept.screen.implementation.viewholders.NowOnCinemaMoviesViewHolder;
 
 /**
  * Created by E5-575G on 11/8/2017.
  */
 
-public class MoviesAdapter extends RecyclerView.Adapter<MoviesViewHolder> {
+public class NowOnCinemaMoviesAdapter extends RecyclerView.Adapter<NowOnCinemaMoviesViewHolder> {
 
     private LayoutInflater mLayoutInflater;
 
-    public MoviesAdapter(Context context) {
+    public NowOnCinemaMoviesAdapter(Context context) {
         mLayoutInflater = LayoutInflater.from(context);
     }
 
     @Override
-    public MoviesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NowOnCinemaMoviesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mLayoutInflater.inflate(R.layout.view_item_movies, parent, false);
-        return new MoviesViewHolder(view);
+        return new NowOnCinemaMoviesViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(MoviesViewHolder holder, int position) {
+    public void onBindViewHolder(NowOnCinemaMoviesViewHolder holder, int position) {
 
     }
 

@@ -7,9 +7,9 @@ import android.view.View;
  * Created by E5-575G on 11/8/2017.
  */
 
-public class MoviesViewHolder extends RecyclerView.ViewHolder {
+public class NowOnCinemaMoviesViewHolder extends RecyclerView.ViewHolder {
 
-    public MoviesViewHolder(View itemView) {
+    public NowOnCinemaMoviesViewHolder(View itemView) {
         super(itemView);
     }
 }

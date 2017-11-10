@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bnkk.padc.proof.of.concept.screen.implementation.R;
-import com.bnkk.padc.proof.of.concept.screen.implementation.adapters.MoviesAdapter;
+import com.bnkk.padc.proof.of.concept.screen.implementation.adapters.NowOnCinemaMoviesAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,32 +19,27 @@ import butterknife.ButterKnife;
  * Created by E5-575G on 11/8/2017.
  */
 
-public class MoviesFragment extends Fragment {
+public class NowOnCinemaMoviesFragment extends Fragment {
 
-    @BindView(R.id.rv_movie_list)
+    @BindView(R.id.rv_now_on_cinema_movie)
     RecyclerView rvMovieList;
 
-    private MoviesAdapter mMoviesAdapter;
-
-    public static MoviesFragment newInstance() {
-        MoviesFragment fragment = new MoviesFragment();
-        return fragment;
-    }
+    private NowOnCinemaMoviesAdapter mNowOnCinemaMoviesAdapter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mMoviesAdapter = new MoviesAdapter(getContext());
+        mNowOnCinemaMoviesAdapter = new NowOnCinemaMoviesAdapter(getContext());
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_movies, container, false);
+        View view = inflater.inflate(R.layout.fragment_now_on_cinema, container, false);
         ButterKnife.bind(this, view);
 
         rvMovieList.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        rvMovieList.setAdapter(mMoviesAdapter);
+        rvMovieList.setAdapter(mNowOnCinemaMoviesAdapter);
 
         return view;
     }
