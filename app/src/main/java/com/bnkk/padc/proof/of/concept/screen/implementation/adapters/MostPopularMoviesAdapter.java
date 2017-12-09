@@ -14,7 +14,7 @@ import com.bnkk.padc.proof.of.concept.screen.implementation.viewholders.MostPopu
  * Created by E5-575G on 11/9/2017.
  */
 
-public class MostPopularMoviesAdapter extends BaseRecyclerAdapter<MostPopularMoviesViewHolder, MovieVO> {
+public class MostPopularMoviesAdapter extends BaseRecyclerAdapter {
 
     public MostPopularMoviesAdapter(Context context) {
         super(context);
@@ -24,10 +24,5 @@ public class MostPopularMoviesAdapter extends BaseRecyclerAdapter<MostPopularMov
     public MostPopularMoviesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mLayoutInflater.inflate(R.layout.view_item_movies, parent, false);
         return new MostPopularMoviesViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(MostPopularMoviesViewHolder holder, int position) {
-        holder.setData(mData.get(position));
     }
 }

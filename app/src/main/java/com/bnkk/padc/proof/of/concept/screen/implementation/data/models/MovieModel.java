@@ -34,7 +34,7 @@ public class MovieModel {
         return objInstance;
     }
 
-    public void StartLoadingMovies() {
+    public void startLoadingMovies() {
         MovieDataAgentImpl.getObjInstance().loadMovies(AppConstants.ACCESS_TOKEN, mmPageIndex);
     }
 

@@ -7,33 +7,24 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bnkk.padc.proof.of.concept.screen.implementation.R;
+import com.bnkk.padc.proof.of.concept.screen.implementation.data.vo.MovieVO;
 import com.bnkk.padc.proof.of.concept.screen.implementation.viewholders.UpcomingMoviesViewHolder;
 
 /**
  * Created by E5-575G on 11/9/2017.
  */
 
-public class UpcomingMoviesAdapter extends RecyclerView.Adapter<UpcomingMoviesViewHolder> {
+public class UpcomingMoviesAdapter extends BaseRecyclerAdapter<UpcomingMoviesViewHolder,MovieVO> {
 
-    private LayoutInflater layoutInflater;
 
     public UpcomingMoviesAdapter(Context context) {
-        layoutInflater = LayoutInflater.from(context);
+        super(context);
+        mLayoutInflater = LayoutInflater.from(context);
     }
 
     @Override
     public UpcomingMoviesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = layoutInflater.inflate(R.layout.view_item_movies, parent, false);
+        View view = mLayoutInflater.inflate(R.layout.view_item_movies, parent, false);
         return new UpcomingMoviesViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(UpcomingMoviesViewHolder holder, int position) {
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return 10;
     }
 }

@@ -15,6 +15,6 @@ public class MovieApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        MovieModel.getObjInstance().StartLoadingMovies();
+        MovieModel.getObjInstance().startLoadingMovies();
     }
 }

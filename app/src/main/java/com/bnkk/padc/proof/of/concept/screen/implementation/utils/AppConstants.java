@@ -7,4 +7,6 @@ package com.bnkk.padc.proof.of.concept.screen.implementation.utils;
 public class AppConstants {
 
     public static final String ACCESS_TOKEN = "b002c7e1a528b7cb460933fc2875e916";
+
+    public static final String IMAGE_BASE_PATH="https://image.tmdb.org/t/p/";
 }

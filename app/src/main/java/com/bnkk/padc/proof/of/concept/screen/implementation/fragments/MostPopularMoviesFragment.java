@@ -67,7 +67,7 @@ public class MostPopularMoviesFragment extends Fragment {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onNewsDataLoaded(RestApiEvents.MovieDataLoadedEvent event) {
-        mMostPopularMoviesAdapter.setNewData(event.getLoadedMovies());
+        mMostPopularMoviesAdapter.appendNewData(event.getLoadedMovies());
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

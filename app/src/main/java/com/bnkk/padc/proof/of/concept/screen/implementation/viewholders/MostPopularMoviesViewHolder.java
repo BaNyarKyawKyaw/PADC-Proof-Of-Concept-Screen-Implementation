@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import com.bnkk.padc.proof.of.concept.screen.implementation.R;
 import com.bnkk.padc.proof.of.concept.screen.implementation.data.vo.MovieVO;
+import com.bnkk.padc.proof.of.concept.screen.implementation.utils.AppConstants;
+import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +27,9 @@ public class MostPopularMoviesViewHolder extends BaseViewHolder<MovieVO> {
     @BindView(R.id.tv_movie_type)
     TextView tvMovieType;
 
+    @BindView(R.id.tv_rating_average)
+    TextView tvRatingAverage;
+
     public MostPopularMoviesViewHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
@@ -34,6 +39,13 @@ public class MostPopularMoviesViewHolder extends BaseViewHolder<MovieVO> {
     public void setData(MovieVO data) {
 
         tvMovieName.setText(data.getTitle());
+
+        tvRatingAverage.setText(String.valueOf(data.getVoteAverage()));
+
+        Glide
+                .with(ivMovieCover.getContext())
+                .load(AppConstants.IMAGE_BASE_PATH + "original" + data.getPosterPath())
+                .into(ivMovieCover);
     }
 
     @Override
