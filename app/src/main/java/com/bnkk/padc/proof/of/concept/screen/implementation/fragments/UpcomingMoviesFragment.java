@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
  * Created by E5-575G on 11/9/2017.
  */
 
-public class UpcomingMoviesFragment extends Fragment {
+public class UpcomingMoviesFragment extends BaseFragment {
 
     @BindView(R.id.rv_upcoming_movie)
     RecyclerView rvUpcomingMovies;
@@ -48,20 +48,6 @@ public class UpcomingMoviesFragment extends Fragment {
         rvUpcomingMovies.setAdapter(mUpcomingMoviesAdapter);
 
         return view;
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        if (!EventBus.getDefault().isRegistered(this)) {
-            EventBus.getDefault().register(this);
-        }
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        EventBus.getDefault().unregister(this);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

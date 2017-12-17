@@ -2,4 +2,5 @@
     <string name="app_name">PADC-Proof-Of-Concept-Screen-Implementation</string>
     <string name="action_settings">Settings</string>
     <string name="current_popularity">Current Popularity</string>
+    <string name="no_data">No data for now</string>
 </resources>

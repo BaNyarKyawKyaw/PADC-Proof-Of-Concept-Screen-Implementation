@@ -18,7 +18,7 @@ import com.bnkk.padc.proof.of.concept.screen.implementation.adapters.MovieTabsAd
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolBar;

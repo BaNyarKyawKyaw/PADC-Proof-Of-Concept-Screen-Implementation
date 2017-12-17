@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
  * Created by E5-575G on 11/9/2017.
  */
 
-public class MostPopularMoviesFragment extends Fragment {
+public class MostPopularMoviesFragment extends BaseFragment {
 
     @BindView(R.id.rv_most_popular_movie)
     RecyclerView rvMostPopularMovie;
@@ -49,20 +49,6 @@ public class MostPopularMoviesFragment extends Fragment {
         rvMostPopularMovie.setAdapter(mMostPopularMoviesAdapter);
 
         return view;
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        if (!EventBus.getDefault().isRegistered(this)) {
-            EventBus.getDefault().register(this);
-        }
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        EventBus.getDefault().unregister(this);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
